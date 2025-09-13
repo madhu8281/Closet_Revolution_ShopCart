@@ -1,0 +1,26 @@
+cli  - command line interface
+
+npm install - g @angular/cli
+
+ng new angular
+
+ng generate component component_name
+ng generate service service_name
+ng generate directive directive_name
+
+
+In TypeScript, the ! (exclamation mark) after a variable name is called the definite assignment assertion operator. This operator tells TypeScript that you are sure this variable will be assigned a value before it is accessed, even though TypeScript's normal flow analysis might not be able to determine this.
+
+id! is the variable name with the definite assignment assertion operator.
+: number specifies that id is of type number.
+
+
+In Angular, "service inside service" refers to the concept of service dependency injection within another service. This is commonly used to break down complex logic into more manageable pieces, and to promote code reusability and modularity.
+
+Here’s an example demonstrating this concept:
+
+Scenario
+Suppose you have two services:
+
+AuthService: Handles authentication logic.
+UserService: Handles user-related operations but requires some authentication logic from AuthService.

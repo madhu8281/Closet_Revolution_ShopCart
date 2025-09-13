@@ -1,0 +1,26 @@
+<app-not-found [visible]="!shopsee" notFoundMessage="Product Not Found!" resetLinkText="Go to Homepage"></app-not-found>
+<div *ngIf="shopsee" class="container">
+    <img [src]="shopsee.imageUrl" [alt]="shopsee.name">
+<div class="details">
+    <div class="header">
+        <span class="name">
+            {{shopsee.name}}
+        </span>
+        <span class="favorite">{{shopsee.favorite?'❤️':'🖤'}}</span>
+    </div>
+    <div class="origins">
+        <span *ngFor="let origin of shopsee.origin">
+            {{origin}}
+        </span>
+    </div>
+    <div class="fabric">
+        <span>Fabric: <strong>{{shopsee.fabric}}</strong></span>
+    </div>
+    <div class="price">
+        <span>
+            {{shopsee.price|currency}}
+        </span>
+    </div>
+    <button (click)="addToCart()">Add to Cart</button>
+</div>
+</div>

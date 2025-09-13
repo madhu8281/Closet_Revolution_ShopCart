@@ -1,0 +1,38 @@
+<app-search></app-search>
+<app-not-found [visible]="!shopsy || shopsy.length<=0" resetLinkText="Reset search"></app-not-found>
+<ul>
+    <li *ngFor="let shopsee of shopsy">
+        <a routerLink="/shopsee/{{shopsee.id}}">
+            <img src="{{shopsee.imageUrl}}" alt="">
+            <div class="content">
+                <div class="name">
+                    {{shopsee.name}}
+                </div>
+                <div class="favorite">
+                    <span>{{shopsee.favorite?'❤️':'🖤'}} </span>
+                    </div>
+                <!-- <star-rating
+                    [value]="shopsee.stars"
+                    [totalstars]="5"
+                    checkedcolors="yellow"
+                    uncheckedcolor="white"
+                    size="24px"
+                    [randomly]="false">
+                </star-rating> -->
+                <div class="product-item-folder">
+                    <div class="origins">
+                        <span *ngFor="let origin of shopsee.origin">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="price">
+                        <span>{{shopsee.price | currency}}</span>
+                    </div>
+                </div>
+                <div class="fabric">
+                    <span>{{shopsee.fabric}}</span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
