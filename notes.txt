@@ -17,7 +17,7 @@ id! is the variable name with the definite assignment assertion operator.
 
 In Angular, "service inside service" refers to the concept of service dependency injection within another service. This is commonly used to break down complex logic into more manageable pieces, and to promote code reusability and modularity.
 
-Here’s an example demonstrating this concept:
+Here is an example demonstrating this concept:
 
 Scenario
 Suppose you have two services:
